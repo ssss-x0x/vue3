@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue'
+
+const msg = ref('未送信')
+const onFormSubmit = (): void => {
+  msg.value = '送信されました'
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <form action="#" @submit.prevent="onFormSubmit">
+    <input type="text" required />
+    <button type="submit">送信</button>
+  </form>
+  <p>{{ msg }}</p>
 </template>
 
 <style scoped>
