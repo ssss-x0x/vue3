@@ -1,3 +1,30 @@
 {
-    "textlint.autoFixOnSave": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "npm.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "stylelint.packageManager": "yarn",
+  "stylelint.validate": ["css", "scss", "postcss", "vue"],
+  "textlint.languages": [
+    "markdown",
+    "html",
+    "json",
+    "javascript",
+    "typescript",
+    "vue"
+  ],
+  "jest.autoRun": "off",
+  "editor.formatOnSave": true,
+  "markdown.styles": ["https://use.fontawesome.com/releases/v5.7.1/css/all.css"]
 }
