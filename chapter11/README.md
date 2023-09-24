@@ -5,6 +5,12 @@
 - コンポーネントを横断するデータのやり取りをするために使う Vuex の代替ライブラリである Pinia について説明
 - Provide/Inject で課題となることを解決するために Pinia を使う
 
+### 参考リンク
+
+- [Pinia 公式](https://pinia.vuejs.org/introduction.html)
+- [Pinia の基本的なつかいかた](https://qiita.com/Naoto_Ito/items/ede2b0a09f474df5e704)
+- [Pinia を使って状態管理](https://www.webdesignleaves.com/pr/plugins/vue-basic-05.html)
+
 ## Pinia の基本
 
 ### Provide/Inject の問題点
@@ -69,7 +75,7 @@ export const useCounterStore = defineStore('counter', () => {
 
 ### state の値をリセットしたい
 
-- $reset は setup 構文では使用できない
+- `$reset` は setup 構文では使用できない
 
 ```
 counterStore.$reset();
@@ -81,7 +87,7 @@ counterStore.$reset();
 counterStore.count = 0;
 ```
 
-- 書き換えたい値が複数ある場合は
+- 書き換えたい値が複数ある場合は `$patch` を使用する
 
 ```
 counterStore.$patch({
